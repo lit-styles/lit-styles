@@ -1,0 +1,25 @@
+{
+  "name": "lit-css",
+  "version": "0.1.0",
+  "description": "A tool to distribute styles via ES modules.",
+  "license": "MIT",
+  "author": "Mikhail Bashkirov <bashmish@gmail.com>",
+  "main": "index.js",
+  "devDependencies": {
+    "@polymer/lit-element": "^0.6.2",
+    "@webcomponents/webcomponentsjs": "^2.1.3",
+    "eclint": "^2.8.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "lodash": "^3.10.1",
+    "wct-browser-legacy": "^1.0.1",
+    "web-component-tester": "^6.8.0"
+  },
+  "scripts": {
+    "lint": "npm run lint:ec && npm run lint:es",
+    "lint:ec": "eclint check '**/*'",
+    "lint:es": "eslint '**/*.js'",
+    "test": "wct --npm"
+  }
+}

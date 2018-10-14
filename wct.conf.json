@@ -1,0 +1,8 @@
+{
+  "browserOptions": {
+    "chrome": [
+      "headless",
+      "disable-gpu"
+    ]
+  }
+}
