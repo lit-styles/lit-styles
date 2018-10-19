@@ -4,6 +4,7 @@
   "description": "A tool to distribute styles via ES modules.",
   "license": "MIT",
   "author": "Mikhail Bashkirov <bashmish@gmail.com>",
+  "repository": "github:bashmish/lit-css",
   "main": "index.js",
   "devDependencies": {
     "@polymer/lit-element": "^0.6.2",
