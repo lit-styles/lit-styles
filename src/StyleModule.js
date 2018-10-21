@@ -9,7 +9,10 @@ export default class StyleModule {
   toString() {
     const flatPartsWhichContainOtherModules = this.__getFlatPartsWhichContainOtherModules();
     const dedupedParts = flatPartsWhichContainOtherModules.filter((part, index) => {
-      return flatPartsWhichContainOtherModules.indexOf(part) === index;
+      if (part instanceof StyleModule) {
+        return flatPartsWhichContainOtherModules.indexOf(part) === index;
+      }
+      return true;
     });
     const allParts = dedupedParts.reduce((array, part) => {
       if (part instanceof StyleModule) {

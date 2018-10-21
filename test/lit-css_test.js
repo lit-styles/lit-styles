@@ -37,5 +37,15 @@ describe('lit-css', () => {
       expect(css`${s1}${s2_2}`.toString()).to.equal('.c1{}.c2{}');
       expect(css`${s2_2}${s1}`.toString()).to.equal('.c2{}.c1{}');
     });
+
+    it('should not dedupe other objects besides the ones created with the literal', () => {
+      const clr = 'red';
+      const size = 1;
+      const s1 = css`.c1{color:${clr};font-size:${size}px;}`;
+      const s2 = css`.c2{color:${clr};font-size:${size}px;}`;
+      const style = css`${s1}${s2}${s1}.c3{color:${clr};font-size:${size}px;}.c4{color:${clr};font-size:${size}px;}`;
+      const content = 'color:red;font-size:1px;';
+      expect(style.toString()).to.equal(`.c1{${content}}.c2{${content}}.c3{${content}}.c4{${content}}`);
+    });
   });
 });
