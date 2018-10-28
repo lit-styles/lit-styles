@@ -15,12 +15,14 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "esm": "^3.0.84",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
   },
   "scripts": {
     "lint": "npm run lint:ec && npm run lint:es",
     "lint:ec": "eclint check '**/*'",
     "lint:es": "eslint '**/*.js'",
-    "test": "mocha"
+    "test": "nyc mocha",
+    "posttest": "rm -rf ./.nyc_output"
   }
 }
