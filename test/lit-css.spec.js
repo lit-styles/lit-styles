@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import css from '../src/lit-css.js';
 
 describe('lit-css', () => {

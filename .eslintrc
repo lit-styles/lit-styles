@@ -14,9 +14,6 @@
       "env": {
         "mocha": true
       },
-      "globals": {
-        "expect": true
-      },
       "rules": {
         "camelcase": 0
       }
