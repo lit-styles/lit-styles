@@ -4,13 +4,13 @@
     "browser": true
   },
   "rules": {
-    "no-underscore-dangle": 0,
     "arrow-body-style": 0,
+    "no-underscore-dangle": 0,
     "import/extensions": 0
   },
   "overrides": [
     {
-      "files": ["test/**/*.js"],
+      "files": ["packages/*/test/**/*.js"],
       "env": {
         "mocha": true
       },
@@ -19,7 +19,7 @@
       }
     },
     {
-      "files": ["demo/**/*.js"],
+      "files": ["packages/*/demo/**/*.js"],
       "rules": {
         "import/no-extraneous-dependencies": 0
       }

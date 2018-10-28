@@ -1,28 +1,22 @@
 {
-  "name": "lit-css",
-  "version": "0.1.2",
-  "description": "A tool to distribute styles via ES modules.",
+  "name": "@lit-styles/root",
+  "private": true,
   "license": "MIT",
   "author": "Mikhail Bashkirov <bashmish@gmail.com>",
-  "repository": "github:bashmish/lit-css",
-  "main": "index.js",
+  "repository": "https://github.com/bashmish/styled-wc/",
   "devDependencies": {
-    "@polymer/lit-element": "^0.6.2",
-    "@webcomponents/webcomponentsjs": "^2.1.3",
-    "chai": "^4.2.0",
-    "eclint": "^2.8.0",
-    "eslint": "^5.7.0",
+    "eclint": "^2.8.1",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "esm": "^3.0.84",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0"
+    "lerna": "3.4.3"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "lint": "npm run lint:ec && npm run lint:es",
-    "lint:ec": "eclint check '**/*'",
+    "lint:ec": "eclint check $(git ls-files)",
     "lint:es": "eslint '**/*.js'",
-    "test": "nyc mocha",
-    "posttest": "rm -rf ./.nyc_output"
+    "version": "lerna version",
+    "test": "lerna exec -- npm test"
   }
 }
