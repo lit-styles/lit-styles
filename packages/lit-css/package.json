@@ -16,7 +16,7 @@
     "nyc": "^13.1.0"
   },
   "scripts": {
-    "test": "nyc mocha",
+    "test": "nyc mocha --require esm",
     "posttest": "rm -rf ./.nyc_output"
   }
 }
