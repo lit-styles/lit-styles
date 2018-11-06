@@ -1,0 +1,34 @@
+{
+  "name": "styled-lit-element",
+  "version": "0.0.0",
+  "description": "Integration of lit-css with LitElement.",
+  "license": "MIT",
+  "author": "Mikhail Bashkirov <bashmish@gmail.com>",
+  "repository": "github:bashmish/lit-styles",
+  "homepage": "https://github.com/bashmish/lit-styles/tree/master/packages/styled-lit-element#readme",
+  "main": "index.js",
+  "dependencies": {
+    "@polymer/lit-element": "^0.6.2",
+    "lit-css": "^0.1.2"
+  },
+  "devDependencies": {
+    "@lit-styles/test-utils": "^0.0.1",
+    "chai": "^4.2.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage-istanbul-reporter": "^2.0.4",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^4.0.0-rc.2",
+    "mocha": "^5.2.0",
+    "wallaby-webpack": "^3.9.13",
+    "webpack": "^4.24.0"
+  },
+  "scripts": {
+    "test": "karma start",
+    "test:debug": "karma start --no-single-run"
+  }
+}

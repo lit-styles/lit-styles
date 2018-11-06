@@ -1,0 +1,13 @@
+{
+  "name": "@lit-styles/test-utils",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Test utils.",
+  "license": "MIT",
+  "author": "Mikhail Bashkirov <bashmish@gmail.com>",
+  "repository": "https://github.com/bashmish/lit-styles/tree/master/packages/test-utils/",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  }
+}
