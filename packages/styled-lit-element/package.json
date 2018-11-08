@@ -1,6 +1,6 @@
 {
   "name": "styled-lit-element",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Integration of lit-css with LitElement.",
   "license": "MIT",
   "author": "Mikhail Bashkirov <bashmish@gmail.com>",
