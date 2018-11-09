@@ -1,7 +1,13 @@
 import { expect } from 'chai';
 import css from '../src/lit-css.js';
+import StyleModule from '../src/StyleModule.js';
 
 describe('lit-css', () => {
+  it('creates a style module', () => {
+    const style = css`.c{}`;
+    expect(style).to.be.an.instanceof(StyleModule);
+  });
+
   it('is automatically coerced to a string containing the same CSS', () => {
     const style = css`.c{}`;
     expect(`${style}`).to.equal('.c{}');
