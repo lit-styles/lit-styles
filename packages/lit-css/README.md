@@ -16,7 +16,7 @@ Subparts of styles like declaration blocks within rulesets are not style modules
 Good:
 
 ```js
-const goodModule = css`
+export default css`
   .my-grey-text {
     color: grey;
   }
@@ -26,7 +26,7 @@ const goodModule = css`
 Bad:
 
 ```js
-const badModule = css`
+export default css`
   color: grey;
 `;
 ```
