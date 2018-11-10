@@ -55,4 +55,50 @@ describe('lit-css', () => {
       expect(style.toString()).to.equal(`.c1{${content}}.c2{${content}}.c3{${content}}.c4{${content}}`);
     });
   });
+
+  describe('foreign object type validation', () => {
+    const typeError = [
+      TypeError,
+      /^Type of the embedded value ".+" is not one of the allowed: "string", "number" or another lit-css\.$/s,
+    ];
+
+    it('allows strings', () => {
+      expect(css`.c{color:${'red'};}`.toString()).to.eql('.c{color:red;}');
+    });
+
+    it('allows numbers', () => {
+      expect(css`.c{font-size:${2}em;}`.toString()).to.eql('.c{font-size:2em;}');
+    });
+
+    it('forbids booleans', () => {
+      expect(() => css`.c{border:${true};}`).to.throw(...typeError);
+      expect(() => css`.c{border:${false};}`).to.throw(...typeError);
+    });
+
+    it('forbids null', () => {
+      expect(() => css`.c{border:${null};}`).to.throw(...typeError);
+    });
+
+    it('forbids undefined', () => {
+      expect(() => css`.c{border:${undefined};}`).to.throw(...typeError);
+    });
+
+    it('forbids NaN', () => {
+      expect(() => css`.c{border:${NaN};}`).to.throw(...typeError);
+    });
+
+    it('forbids symbols', () => {
+      expect(() => css`.c{border:${Symbol('foo')};}`).to.throw(...typeError);
+    });
+
+    it('forbids functions', () => {
+      const mixin = () => 'color:red;';
+      expect(() => css`.c{${mixin}}`).to.throw(...typeError);
+      expect(css`.c{${mixin()}}`.toString()).to.eql('.c{color:red;}');
+    });
+
+    it('forbids objects', () => {
+      expect(() => css`.c{${{}}}`).to.throw(...typeError);
+    });
+  });
 });
