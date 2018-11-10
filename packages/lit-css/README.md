@@ -31,80 +31,9 @@ const badModule = css`
 `;
 ```
 
-## Example for Web Components
+## Examples
 
-Even in Web Components not every component is a Custom Element with a shadow root.
-You often create a component as a set of reusable classes following certain naming conventions.
-Shadow DOM still helps to encapsulate those and prevent the leak of classes with generic names.
-
-Imagine you have a `normalize.css` version for shadow roots.
-And you want all other styles to be built upon it.
-For example you might have 2 variations of a table:
-
-`my-styles/table.js`
-
-```js
-import { css } from 'lit-css';
-import normalizeShadowStyle from './normalize-shadow.js';
-
-export default css`
-  ${normalizeShadowStyle}
-  .table {
-    /* my default table styles */
-  }
-`;
-```
-
-`my-styles/fancy-table.js`
-
-```js
-import { css } from 'lit-css';
-import normalizeShadowStyle from './normalize-shadow.js';
-
-export default css`
-  ${normalizeShadowStyle}
-  .fancy-table {
-    /* my fancy table styles */
-  }
-`;
-```
-
-Then in your component you can use both in a very natural way for template literals.
-The composed module will be coerced to a string automatically.
-An example using the `LitElement` base class might look like this:
-
-`my-component.js`
-
-```js
-import { LitElement, html } from '@polymer/lit-element';
-import { css } from 'lit-css';
-import tableStyle from 'my-styles/table.js';
-import fancyTableStyle from 'my-styles/fancy-table.js';
-
-class MyComponent extends LitElement {
-  static get style() {
-    return css`
-      ${tableStyle}
-      ${fancyTableStyle}
-      /* ...more styles */
-    `;
-  }
-
-  render() {
-    return html`
-      <style>${this.constructor.style}</style>
-      <table class="table">
-        <!-- some content -->
-      </table>
-      <table class="fancy-table">
-        <!-- some content -->
-      </table>
-    `;
-  }
-}
-
-customElements.define('my-component', MyComponent);
-```
+- [Web Components](https://codesandbox.io/s/5k0kj3rj7x)
 
 ## Gotchas
 
