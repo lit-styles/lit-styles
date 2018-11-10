@@ -44,6 +44,10 @@ So you should never rely on a different order by placing your dependencies in th
 In other words, dependencies of your style module must be always injected on top.
 If you follow the rule of thumb for scalable CSS - the specificity of selectors grows with each new layer of styles - then you will likely never want to do the opposite.
 
-## Support in Text Editors
+## Support in Code Editors
 
-- VSCode [es6-string-css](https://marketplace.visualstudio.com/items?itemName=bashmish.es6-string-css)
+At the moment you can use the fact that awesome [styled-components](https://www.styled-components.com) have `css` literal feature. This is not the same feature as in lit-css, but close enough for syntax highlighting and autocomplete. It is widely supported in many code editors, for example:
+
+- [VSCode](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+- [WebStorm (and other JetBrains IDEs)](https://plugins.jetbrains.com/plugin/9997-styled-components)
+- read about others on [the official docs](https://www.styled-components.com/docs/tooling#syntax-highlighting)
