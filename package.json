@@ -3,7 +3,7 @@
   "private": true,
   "license": "MIT",
   "author": "Mikhail Bashkirov <bashmish@gmail.com>",
-  "repository": "https://github.com/bashmish/styled-wc/",
+  "repository": "github:lit-styles/lit-styles",
   "devDependencies": {
     "eclint": "^2.8.1",
     "eslint": "^5.8.0",

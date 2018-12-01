@@ -4,8 +4,8 @@
   "description": "A tool to distribute styles via ES modules.",
   "license": "MIT",
   "author": "Mikhail Bashkirov <bashmish@gmail.com>",
-  "repository": "github:bashmish/lit-styles",
-  "homepage": "https://github.com/bashmish/lit-styles/tree/master/packages/lit-css#readme",
+  "repository": "github:lit-styles/lit-styles",
+  "homepage": "https://github.com/lit-styles/lit-styles/tree/master/packages/lit-css#readme",
   "main": "index.js",
   "devDependencies": {
     "chai": "^4.2.0",

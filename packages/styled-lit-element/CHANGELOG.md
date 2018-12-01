@@ -8,4 +8,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **styled-lit-element:** initial StyledLitElement and StyledLitElementMixin ([d713db7](https://github.com/bashmish/lit-styles/commit/d713db7))
+* **styled-lit-element:** initial StyledLitElement and StyledLitElementMixin ([d713db7](https://github.com/lit-styles/lit-styles/commit/d713db7))
