@@ -1,7 +1,14 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const wallabyWebpack = require('wallaby-webpack');
+const path = require('path');
 
-const wallabyPostprocessor = wallabyWebpack();
+const wallabyPostprocessor = wallabyWebpack({
+  resolve: {
+    modules: [
+      path.join(__dirname, '../../node_modules'),
+    ],
+  },
+});
 
 module.exports = {
   files: [

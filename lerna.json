@@ -6,6 +6,7 @@
   "npmClientArgs": [
     "--no-package-lock"
   ],
+  "hoist": true,
   "command": {
     "version": {
       "push": false,
